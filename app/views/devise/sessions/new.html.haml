@@ -1,11 +1,11 @@
 .row
   .col-xs-4.col-xs-offset-4
     %h2 Log in
-    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = simple_form_for(resource, as: resource_name, url: user_session_path(resource_name)) do |f|
       = f.error_notification
       .form-inputs
-        = f.input :email, autofocus: true
-        = f.input :password
+        = f.input :email, autofocus: true, input_html: {id: 'Email'}
+        = f.input :password, input_html: {id: 'Password'}
         = f.input_field :remember_me, as: :boolean
         %b Remember me
       .form-actions
