@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :teachers
+
+  get :visitors, to: 'visitors#index'
 end
