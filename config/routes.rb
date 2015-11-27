@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :teachers do
-    resources :subjects
+    get :subjects
   end
 
   get :visitors, to: 'visitors#index'
