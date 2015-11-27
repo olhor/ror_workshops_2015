@@ -11,24 +11,24 @@ en:
     created: "%{resource} has been created!"
     updated: "%{resource} has been updated!"
     deleted: "%{resource} has been deleted!"
-    actions: actions
-    edit: edit
-    show: show
-    delete: delete
-    show_subject_items: show subjects
+    actions: Actions
+    edit: Edit
+    show: Show
+    delete: Delete
+    show_subject_items: Show subjects
     back: Back
     add_new_item: Add new one
-    subjects: subjects
+    subjects: Subjects
   student:
     columns:
-      first_name: first name
-      last_name: last name
+      first_name: First name
+      last_name: Last name
   teacher:
     columns:
-      first_name: first name
-      last_name: last name
-      academic_title: academic title
+      first_name: First name
+      last_name: Last name
+      academic_title: Academic title
   subjects:
     columns:
       full_name: Full name
-      avg_notes: Notes avarange
+      avg_notes: Notes avarage
