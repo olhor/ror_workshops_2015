@@ -3,6 +3,7 @@ class StudentDecorator < BaseDecorator
     "#{first_name} #{last_name}"
   end
 
+  # Calculates avarage from notes.
   def avg_notes(subject_item)
     notes = subject_item.subject_item_notes
     return '0.00' if notes.blank?
