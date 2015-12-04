@@ -24,6 +24,15 @@ feature 'User edits student' do
     expect(page).to have_content 'Marcin'
   end
 
+  scenario 'with optional input' do
+    select '1984',      from: "student_birthdate_1i"
+    select 'September', from: "student_birthdate_2i"
+    select '18',        from: "student_birthdate_3i"
+    click_button 'Update Student'
+    expect(page).to have_content 'Student has been updated!'
+    expect(page).to have_content '1984-09-18'
+  end
+
   scenario 'with invalid input' do
     fill_in 'First name', with: ''
     click_button 'Update Student'

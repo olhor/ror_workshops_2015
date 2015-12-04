@@ -15,6 +15,16 @@ feature 'User creates student' do
     expect(page).to have_content 'Student has been created!'
   end
 
+  scenario 'with optional input' do
+    fill_in 'First name', with: 'Adrian'
+    fill_in 'Last name', with: 'Nowacki'
+    select '1984',      from: "student_birthdate_1i"
+    select 'September', from: "student_birthdate_2i"
+    select '18',        from: "student_birthdate_3i"
+    click_button 'Create Student'
+    expect(page).to have_content 'Student has been created!'
+  end
+
   scenario 'with missing first name' do
     fill_in 'Last name', with: 'Nowacki'
     click_button 'Create Student'

@@ -3,6 +3,7 @@ require 'spec_helper'
 feature 'User visits students page'  do
   let!(:student_1) { create :student, first_name: 'Jan' }
   let!(:student_2) { create :student, first_name: 'Adam' }
+  let!(:student_3) { create :student, birthdate: Date.new(1984, 9, 18) }
 
   background do
     sign_in
@@ -17,6 +18,7 @@ feature 'User visits students page'  do
 
     expect(page).to have_content 'Jan'
     expect(page).to have_content 'Adam'
+    expect(page).to have_content '1984-09-18'
   end
 
   scenario 'only when sign in' do

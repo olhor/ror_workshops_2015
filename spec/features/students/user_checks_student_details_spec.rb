@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'User checks student details' do
-  let!(:student) { create :student, first_name: 'Jan', last_name: 'Nowak' }
+  let!(:student) { create :student, first_name: 'Jan', last_name: 'Nowak', birthdate: Date.new(1984, 9, 18) }
 
   background do
     sign_in

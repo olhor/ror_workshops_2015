@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe StudentDecorator do
   let(:teacher) { create :teacher, first_name: 'John', last_name: 'Smith' }
-  let(:student) { create :student, first_name: 'John', last_name: 'Smith' }
+  let(:student) { create :student, first_name: 'John', last_name: 'Smith', birthdate: Date.new(1984, 9, 18) }
   let(:subject_item) { create :subject_item, teacher: teacher }
   let(:second_subject_item) { create :subject_item }
   let!(:note_1) { create :subject_item_note, value: 5, student: student, subject_item: second_subject_item }
